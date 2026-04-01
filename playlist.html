@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최애 앨범 소개</title>
+    <style>
+        /* 여기서부터 자유롭게 코딩을 시작하세요! */
+        /* (강사님이 주신 필수 색상 2개 잊지 마세요!) */
+        
+        /* 중앙 정렬 */
+#track-table td {
+    text-align: center;
+}
+
+/* 0. 배경: 차분한 베이지와 실버 포인트 */
+body {
+  background-color: #f4ece1; 
+  color: #4b3621;
+  font-family: serif;
+}
+
+/* 2. 가사 영역: 찢어진 종이와 골드 하이라이트 */
+.lyrics-box {
+  background-color: #ffffff;
+  padding: 25px;
+  margin: 20px;
+  
+  /* [실버 포인트] 테두리를 은색 실선으로 둘러서 액자 같은 느낌을 줌 */
+  border: 2px solid #C0C0C0; 
+  
+  /* [포인트] 윗부분은 여전히 뜯어낸 느낌의 점선 */
+  border-top: 4px dashed #C0C0C0; 
+  
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+  /* [골드 포인트] 중요한 가사는 금색 배경으로 강조 */
+  background-color: #FFD700; 
+  color: #3e2723;
+  padding: 2px 4px;
+  font-weight: bold;
+}
+
+/* 4. 표(table): 실버 구분선과 골드 제목 */
+#track-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  /* [골드 포인트] 표의 제목 글씨를 금색으로 */
+  color: #FFD700;
+  background-color: #4b3621; /* 배경을 어둡게 해서 금색이 잘 보이게 */
+  padding: 12px;
+  border-bottom: 2px solid #C0C0C0;
+}
+
+td {
+  padding: 10px;
+  /* [실버 포인트] 줄 사이 구분선을 은색으로 */
+  border-bottom: 1px solid #C0C0C0; 
+}
+
+/* 5. 버튼: 황동(골드) 느낌의 버튼 */
+.listen-btn {
+  /* [골드 포인트] 버튼을 금색으로 설정 */
+  background-color: #FFD700;
+  color: #3e2723;
+  border: 1px solid #C0C0C0; /* 테두리는 은색 */
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.listen-btn:hover {
+  /* 마우스를 올리면 실버색으로 변하게 설정 */
+  background-color: #C0C0C0;
+  color: white;
+}
+
+        /* 1. 타이포그래피 (h1, h2, .artist-name 등) 폰트, 색상, 크기, 정렬 */
+
+
+        /* 2. 가사 영역 (.lyrics-box) 및 하이라이트 글자(.highlight) 강조 */
+
+
+        /* 3. 목록(#charm-list) 불릿 기호 지우고 예쁘게 꾸미기 */
+
+
+        /* 4. 표(#track-table) 한 줄 테두리(border-collapse), 패딩, 짝수줄 배경색(:nth-child) */
+
+
+        /* 5. 버튼(.listen-btn) 꾸미고 호버(:hover) 효과 넣기 */
+
+    </style>
+</head>
+<body>
+    <header id="album-header">
+        <p class="artist-name">프론트 엔드 프로그래밍 4조</p>
+        <h1>4조의 MIX TAPE</h1>
+        <p class="subtitle">각 조원의 최애곡으로 만든 플레이리스트</p>
+    </header>
+
+    <section class="lyrics-section">
+        <h2>🎵 내곡의 킬링 파트 가사 - Vancouver 2</h2>
+        <div class="lyrics-box">
+            <p>어떤 이유로도 안 떠나 함부로</p>
+            <p class="highlight">이건 고속도로, 못 돌아가 뒤로</p>
+            <p>일 년에 두 번, I'll go to Vancouver</p>
+            <p>So don't cry, my day one, my bae, my Uno</p>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <h2>✨ 내곡의 입덕 포인트</h2>
+        <ul id="charm-list">
+            <li>낭만 넘치는 빅나티의 첫사랑으로 가득한 가사</li>
+            <li>그 첫사랑과 이어지고 발매한 곡</li>
+            <li>엄청 좋은 비트와, 빅나티의 낭만넘치는 짝사랑의 마침표.</li>
+        </ul>
+    </section>
+
+    <section class="track-section">
+        <h2>🎧 추천 플레이리스트</h2>
+        <table id="track-table">
+            <thead>
+                <tr>
+                    <th>Track</th>
+                    <th>아티스트</th>
+                    <th>곡명</th>
+                    <th>Play Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. 승헌의 Pick</td>
+                    <td>BIG Naughty</td>
+                    <td>VANCOUVER 2</td>
+                    <td>3:23</td>
+                </tr>
+                <tr>
+                    <td>2. 한비의 Pick</td>
+                    <td>Code Kunst</td>
+                    <td>O</td>
+                    <td>3:30</td>
+                </tr>
+                <tr>
+                    <td>3. 태근의 Pick</td>
+                    <td>HANRORO</td>
+                    <td>사랑하게 될거야</td>
+                    <td>2:45</td>
+                </tr>
+                <tr>
+                    <td>4. 성민의 Pick</td>
+                    <td>Michael Jakson</td>
+                    <td>Billie Jean</td>
+                    <td>4:55</td>
+                </tr>
+                <tr>
+                    <td>5. 영준의 Pick</td>
+                    <td>NEW JEANS</td>
+                    <td>Hype Boy</td>
+                    <td>2:58</td>
+                </tr>
+                <tr>
+                    <td>6. 정진의 Pick</td>
+                    <td>Beenzino</td>
+                    <td>Aqua Man</td>
+                    <td>3:47</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer id="album-footer">
+        <button class="listen-btn">전곡 스밍하러 가기</button>
+    </footer>
+</body>
+</html>
+
